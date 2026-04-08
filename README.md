@@ -1,31 +1,34 @@
 # Flashlight
 
-## Core Idea
+Core idea: connect internal model change to behavioral cause.
 
-The Flashlight project aims to connect internal model changes to their behavioral causes. By tracing how variations in internal states of a system affect its behavior, we can better understand and predict outcomes in complex systems. This approach helps in diagnosing issues and optimizing performance by revealing the interplay between a model's internal structure and its external manifestations.
+`Flashlight` is a documentation-first causal interpretability project. Its purpose is to move beyond correlational explanations and test whether specific internal changes actually drive observable behavioral differences in a model.
 
-## Objectives
-- Identify and track changes in internal models.
-- Analyze the behavioral outputs resulting from these changes.
-- Provide insights and tools for improving model performance based on behavioral feedback.
+The emphasis is intervention-based validation. It is not enough to find an internal signal that co-occurs with a behavior. The research question is whether changing that internal signal reliably changes the behavior in the predicted direction.
 
-## Getting Started
-- Clone the repository:
-  ```bash
-  git clone https://github.com/Costder/Flashlight.git
-  ```
-- Install dependencies:
-  ```bash
-  cd Flashlight
-  # install your dependencies here
-  ```
-- Run the application:
-  ```bash
-  # command to run your application
-  ```
+## Why This Matters
 
-## Contributing
-We welcome contributions to enhance the Flashlight project. Please read the contributing guidelines before making changes.
+Interpretability work often stops at descriptive patterns:
 
-## License
-This project is licensed under the MIT License.
+- this neuron activates here
+- this feature cluster appears there
+- this representation correlates with a response style
+
+Flashlight is interested in the next step: causal evidence. If an internal feature matters, intervention should reveal that relationship more directly.
+
+## System Outline
+
+- `dummy brains`: controlled model surrogates used to make analysis loops cheaper and more testable
+- `analyzer`: the component that extracts candidate internal signals and hypotheses
+- `intervention loop`: the validation process that perturbs internal state and measures behavioral effects
+
+## Scope
+
+This repository documents the conceptual system, research direction, and validation philosophy. Detailed instrumentation, training procedures, and experimental implementation are intentionally kept abstract.
+
+## Repository Map
+
+- `STATUS.md`: current project state
+- `docs/overview.md`: plain-language overview
+- `docs/methodology.md`: high-level methodology
+- `docs/roadmap.md`: staged research plan

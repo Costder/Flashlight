@@ -1,12 +1,16 @@
-# Causal Interpretability
+# Overview
 
-Causal interpretability refers to the ability to understand and explain the causal relationships that influence outcomes within a model or system. Unlike traditional interpretability, which focuses on understanding the decision boundaries and patterns, causal interpretability seeks to uncover the underlying reasons why a model makes certain predictions by identifying causal links.
+Flashlight is about causal interpretability for language models.
 
-This approach is crucial for various applications where knowing the 'why' behind a decision is as important as the decision itself, such as healthcare, finance, and social sciences.
+In plain terms, the project asks a harder question than standard interpretability: when a model behaves differently, which internal change actually caused that difference?
 
-Key concepts in causal interpretability include:
-- **Causation vs. Correlation**: Understanding that just because two variables are correlated does not imply that one causes the other.
-- **Causal Models**: Frameworks like Directed Acyclic Graphs (DAGs) that visually represent causal relationships.
-- **Interventions and Counterfactuals**: Analyzing what changes when a variable is manipulated to understand its causal effect.
+Many interpretability approaches identify patterns that are interesting but inconclusive. A feature may correlate with a behavior without being responsible for it. Flashlight tries to close that gap by combining internal analysis with controlled interventions.
 
-Causal interpretability can enhance trust in automated systems, guide policymakers, and improve model performance by providing insights into the relationships embedded in the data.
+The intended result is a more defensible chain of evidence:
+
+- observe a behavioral pattern
+- identify a candidate internal mechanism
+- intervene on that mechanism
+- test whether the behavior changes accordingly
+
+That framing makes the work relevant to debugging, alignment, capability analysis, and evaluating whether an interpretation claim is strong enough to trust.

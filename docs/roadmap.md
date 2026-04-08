@@ -1,19 +1,34 @@
 # Roadmap
 
-## Stages
+## Stage 1: Data
 
-1. **Data**
-   - Collect relevant data for analysis.
-   - Ensure data quality and integrity.
+Build the behavioral and internal observation sets needed for analysis.
 
-2. **Signal Extraction**
-   - Identify and extract significant signals from the data.
-   - Utilize appropriate methods and algorithms for signal processing.
+- collect representative tasks and model traces
+- organize examples by behavioral pattern
+- establish a baseline for later intervention comparisons
 
-3. **Analyzer Training**
-   - Train machine learning models on the extracted signals.
-   - Validate the performance of the models.
+## Stage 2: Signal Extraction
 
-4. **Intervention Validation**
-   - Test the validated models in a real-world scenario.
-   - Assess the effectiveness of the interventions based on model predictions.
+Identify candidate internal signals that may explain behavior.
+
+- search for recurring structures tied to observed outputs
+- separate weak correlations from stronger candidates
+- prepare analyzable representations for downstream use
+
+## Stage 3: Analyzer Training
+
+Improve the system that proposes and ranks causal hypotheses.
+
+- refine how candidate mechanisms are surfaced
+- improve reliability across task types
+- reduce false positives that look explanatory but do not survive intervention
+
+## Stage 4: Intervention Validation
+
+Test whether candidate explanations hold up under controlled change.
+
+- intervene on targeted internal mechanisms
+- measure behavioral movement after intervention
+- compare predicted effects to actual outcomes
+- document where causal claims are supported and where they fail
